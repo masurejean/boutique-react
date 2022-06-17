@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    background-color: black;
+    color: white;
+}
+
+nav li {
+    padding: 2rem 1rem;
+    text-align: center;
+}

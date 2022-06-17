@@ -1,0 +1,26 @@
+.Card {
+    max-height: 18rem;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.cardImg {
+    width: 100%;
+}
+
+.cardBtn {
+    text-align: center;
+    margin-top: auto;
+}
+
+.cardPrix {
+    position: absolute;
+    top: -1.5rem;
+    right: -1.5rem;
+    padding: .5rem;
+    background-color: rgb(119, 119, 119);
+    color: #fff;
+}

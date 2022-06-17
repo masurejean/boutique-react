@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Menu from "./components/Menu/Menu";
+import Products from "./components/Products/Products";
+import Panier from './components/Panier/Panier';
 import './App.css';
 
-function App() {
+function App(props) {
+  const [displayCart, setDisplayCart] = useState(false);
+  function handleClick(){
+    console.log("click");
+    console.log(displayCart);
+    setDisplayCart(!displayCart);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <Menu action={()=>{handleClick()}}/>
       </header>
+      <main>
+        {/*
+        if(displayCart === true){
+          <Cart/>
+        } else {
+          ""
+        }
+        */}
+        {displayCart ? <Panier/> : ""}
+        <Products/>
+      </main>
     </div>
   );
 }
-
 export default App;
